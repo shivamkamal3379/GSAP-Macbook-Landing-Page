@@ -6,11 +6,15 @@ import { Box } from '@react-three/drei'
 import { OrbitControls } from "@react-three/drei";
 import MacbookModel14 from './models/Macbook-14'
 import MacbookModel16 from './models/Macbook-16'
-import StudioLights from './StudioLights';
+import StudioLights from './three/StudioLights';
+import ModelSwitcher from './three/ModelSwitcher';
+import { useMediaQuery } from 'react-responsive';
 
 
 
 const ProductViewer = () => {
+
+    const isMobile = useMediaQuery({query : '(max-width : 1024px)'})
 
     const { color , scale , setColor , setScale}= useMacbookStore ();
 
@@ -54,17 +58,12 @@ const ProductViewer = () => {
         </div>
       </div>
       
-{/* 
-      <Canvas id='canvas'>
-            <box position = {[-1,0,0]}>
 
-            </box>
-      </Canvas> */}
       <Canvas id='canvas'  camera ={{position :[0,2,5] , fov:50 , near :0.1, far:100}}>
             <StudioLights/>
             <MacbookModel14 scale ={0.06} position={[0 , 0 , 0]}/>
         
-        <OrbitControls enableZoom = {false}/>
+        <ModelSwitcher  scale={isMobile? scale -0.03 :scale} isMobile = {isMobile} />
       </Canvas>
     </section>
   )
