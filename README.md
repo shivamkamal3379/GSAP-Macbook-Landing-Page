@@ -1,16 +1,128 @@
-# React + Vite
+#  Apple MacBook GSAP Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully animated, modern Apple-style landing page built using **React**, **Vite**, **GSAP**, **React-Three-Fiber**, **Three.js**, and **TailwindCSS**.
+This project showcases a 3D interactive **MacBook model**, smooth scroll-based animations, and premium product-page UI inspired by Apple.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+### 🎬 3D MacBook Experience
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* High-quality **3D MacBook Model**
+* Interactive orbit + cinematic lighting
+* Powered by **React-Three-Fiber** + **Three.js**
+* Optional scroll-triggered texture changes
 
-## Expanding the ESLint configuration
+### 🌀 GSAP Animations
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Smooth reveal animations
+* ScrollTriggers
+* Timeline-based text + model animation
+
+### 📱 Responsive Design
+
+* Fully responsive across all devices
+* Uses `react-responsive` + TailwindCSS utilities
+
+### 🎨 Apple-Inspired UI
+
+* Floating feature cards
+* Minimalistic clean layout
+* Sections with modern gradients + blur effects
+
+---
+
+## 🛠 Tech Stack
+
+| Purpose          | Technology                  |
+| ---------------- | --------------------------- |
+| Framework        | React 19 + Vite             |
+| 3D Engine        | React-Three-Fiber, Three.js |
+| UI/Styling       | TailwindCSS                 |
+| Animation        | GSAP, @gsap/react           |
+| State Management | Zustand                     |
+| Utilities        | clsx, react-responsive      |
+
+---
+
+## 📦 Dependencies
+
+```json
+{
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.4.2",
+    "@tailwindcss/vite": "^4.1.17",
+    "clsx": "^2.1.1",
+    "gsap": "^3.13.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-responsive": "^10.0.1",
+    "tailwindcss": "^4.1.17",
+    "three": "^0.181.2",
+    "zustand": "^5.0.9"
+  }
+}
+```
+
+---
+
+## 📂 Project Structure
+
+```
+project/
+│── public/
+│   ├── models/
+│   ├── textures/
+│   └── logo.svg
+│
+│── src/
+│   ├── components/
+│   │   ├── Features.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   └── Footer.jsx
+│   │
+│   ├── three/
+│   │   ├── MacbookModel.jsx
+│   │   └── StudioLights.jsx
+│   │
+│   ├── store/
+│   │   └── macbookStore.js
+│   │
+│   ├── styles/
+│   │   └── globals.css
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+└── package.json
+```
+
+---
+
+## ▶️ Running the Project
+
+### 1️⃣ Install dependencies
+
+```sh
+npm install
+```
+
+### 2️⃣ Start development server
+
+```sh
+npm run dev
+```
+
+
+
+
+
+---
+
+## 👤 Author
+
+Built by **Shivam**, exploring 3D web, GSAP animations, and premium UI engineering.
